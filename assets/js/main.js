@@ -4,13 +4,12 @@
   var root = document.documentElement;
   var themeStorageKey = "as-theme";
   var savedTheme = localStorage.getItem(themeStorageKey);
-  var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
   function resolveTheme() {
     if (savedTheme === "light" || savedTheme === "dark") {
       return savedTheme;
     }
-    return prefersDark ? "dark" : "light";
+    return "light";
   }
 
   function setTheme(theme, persist) {
