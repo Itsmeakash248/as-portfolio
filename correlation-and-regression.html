@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Correlation and regression chapter covering scatter analysis, Pearson and Spearman coefficients, probable error, regression equations, and prediction use cases."
+    />
+    <title>Applied Statistics Portfolio | Correlation and Regression</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body data-page-title="Correlation and Regression" data-owner="Akash">
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <a class="brand" href="home.html" aria-label="Go to home page">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-text">Akash | Statistics</span>
+        </a>
+
+        <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-label="Open navigation" aria-expanded="false">
+          menu
+        </button>
+
+        <nav>
+          <ul class="nav-links" data-nav-links>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="description-of-the-data.html">Data Description</a></li>
+            <li><a href="probability.html">Probability</a></li>
+            <li><a href="random-variables-and-probability-distribution.html">Random Variables</a></li>
+            <li><a href="statistical-inference-i.html">Inference I</a></li>
+            <li><a href="correlation-and-regression.html">Correlation & Regression</a></li>
+            <li><a href="lab-assessment.html">Lab Assessment</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+
+        <div class="topbar-actions">
+          <button class="btn btn-outline js-download-pdf" type="button">Download PDF</button>
+          <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch theme" title="Switch theme">moon</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container hero-grid">
+          <article class="hero-panel reveal">
+            <p class="eyebrow">Chapter 5</p>
+            <h1 class="hero-title" data-pdf-point>Correlation and Regression</h1>
+            <p class="hero-subtitle" data-pdf-point>
+              Correlation quantifies relationship strength and direction, while regression builds equations for prediction
+              and estimation between variables.
+            </p>
+            <div class="hero-meta">
+              <span class="chip">Scatter diagram</span>
+              <span class="chip">Pearson r</span>
+              <span class="chip">Spearman rank</span>
+              <span class="chip">Regression lines</span>
+            </div>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#correlation">Correlation tools</a>
+              <a class="btn btn-accent" href="#regression">Regression models</a>
+            </div>
+          </article>
+
+          <aside class="glass-card hero-summary reveal" data-delay="120">
+            <h2 class="section-title">Interpretation scale</h2>
+            <div class="data-table-wrap">
+              <table class="data-table" aria-label="Correlation interpretation table">
+                <thead>
+                  <tr>
+                    <th>Magnitude of r</th>
+                    <th>Interpretation</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>0.00 to 0.30</td>
+                    <td>Weak relationship</td>
+                  </tr>
+                  <tr>
+                    <td>0.31 to 0.70</td>
+                    <td>Moderate relationship</td>
+                  </tr>
+                  <tr>
+                    <td>0.71 to 1.00</td>
+                    <td>Strong relationship</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="correlation">
+        <div class="container">
+          <div class="cards reveal" data-delay="80">
+            <article class="card" data-pdf-point>
+              <h3>1. Concept of Correlation</h3>
+              <p>
+                Correlation measures how two variables move together. Positive correlation means both increase together,
+                negative means one increases as the other decreases.
+              </p>
+              <ul>
+                <li>Simple correlation: between two variables.</li>
+                <li>Multiple correlation: one variable vs a group.</li>
+                <li>Partial correlation: relationship after controlling others.</li>
+              </ul>
+            </article>
+
+            <article class="card" data-pdf-point>
+              <h3>2. Scatter Diagram Method</h3>
+              <p>
+                A scatter plot provides immediate visual evidence of direction and linearity before formal coefficient
+                computation.
+              </p>
+              <ul>
+                <li>Upward slope: positive relationship.</li>
+                <li>Downward slope: negative relationship.</li>
+                <li>No pattern: weak or no relationship.</li>
+              </ul>
+            </article>
+
+            <article class="card" data-pdf-point>
+              <h3>3. Pearson and Spearman</h3>
+              <div class="equation">Pearson r = covariance(X, Y) / (sigmaX * sigmaY)</div>
+              <div class="equation">Spearman rho = 1 - [6 * sum(d^2)] / [n * (n^2 - 1)]</div>
+              <p>Pearson is used for interval data; Spearman is useful for ranked or ordinal data.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="regression">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <h2 class="section-title">Regression Analysis</h2>
+              <p class="section-note">Regression extends relationship analysis into prediction.</p>
+            </div>
+          </div>
+
+          <div class="cards reveal" data-delay="90">
+            <article class="card" data-pdf-point>
+              <h3>4. Regression Lines</h3>
+              <ul>
+                <li>Regression of Y on X predicts Y from X.</li>
+                <li>Regression of X on Y predicts X from Y.</li>
+                <li>Both lines intersect at mean point (x-bar, y-bar).</li>
+              </ul>
+              <div class="equation">Y - y-bar = b_yx (X - x-bar)</div>
+              <div class="equation">X - x-bar = b_xy (Y - y-bar)</div>
+            </article>
+
+            <article class="card" data-pdf-point>
+              <h3>5. Regression Coefficients</h3>
+              <p>
+                Coefficients b_yx and b_xy describe expected change in one variable per unit change in the other. Both share
+                the same sign as correlation.
+              </p>
+              <div class="equation">r^2 = b_yx * b_xy</div>
+            </article>
+
+            <article class="card" data-pdf-point>
+              <h3>6. Reliability and Use Cases</h3>
+              <ul>
+                <li>Probable error evaluates reliability of observed correlation.</li>
+                <li>Regression supports forecasting in business and economics.</li>
+                <li>Useful in trend analysis, cost modeling, and performance prediction.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container reveal">
+          <div class="callout" data-pdf-point>
+            <strong>Learning Outcomes</strong>
+            Interpret relationship direction and strength, compute and compare Pearson and Spearman coefficients, derive
+            regression equations, and use fitted models for practical prediction tasks.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>Applied Statistics Portfolio | Chapter 5</p>
+        <p><span data-year></span> | Akash, BCA Department</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" type="button" aria-label="Back to top">up</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

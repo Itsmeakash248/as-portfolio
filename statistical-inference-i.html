@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Statistical Inference I chapter covering sampling methods, confidence intervals, hypothesis testing, sample size determination, and tests for means and proportions."
+    />
+    <title>Applied Statistics Portfolio | Statistical Inference I</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body data-page-title="Statistical Inference I" data-owner="Akash">
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <a class="brand" href="home.html" aria-label="Go to home page">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-text">Akash | Statistics</span>
+        </a>
+
+        <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-label="Open navigation" aria-expanded="false">
+          menu
+        </button>
+
+        <nav>
+          <ul class="nav-links" data-nav-links>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="description-of-the-data.html">Data Description</a></li>
+            <li><a href="probability.html">Probability</a></li>
+            <li><a href="random-variables-and-probability-distribution.html">Random Variables</a></li>
+            <li><a href="statistical-inference-i.html">Inference I</a></li>
+            <li><a href="correlation-and-regression.html">Correlation & Regression</a></li>
+            <li><a href="lab-assessment.html">Lab Assessment</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+
+        <div class="topbar-actions">
+          <button class="btn btn-outline js-download-pdf" type="button">Download PDF</button>
+          <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch theme" title="Switch theme">moon</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container hero-grid">
+          <article class="hero-panel reveal">
+            <p class="eyebrow">Chapter 4</p>
+            <h1 class="hero-title" data-pdf-point>Statistical Inference I</h1>
+            <p class="hero-subtitle" data-pdf-point>
+              Inference connects sample evidence to population-level conclusions using controlled uncertainty, confidence
+              intervals, and formal hypothesis testing.
+            </p>
+            <div class="hero-meta">
+              <span class="chip">Sampling</span>
+              <span class="chip">Confidence interval</span>
+              <span class="chip">Type I and II errors</span>
+              <span class="chip">p-value approach</span>
+            </div>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#sampling">Explore sampling methods</a>
+              <a class="btn btn-accent" href="#tests">See hypothesis tests</a>
+            </div>
+          </article>
+
+          <aside class="glass-card hero-summary reveal" data-delay="120">
+            <h2 class="section-title">Inference workflow</h2>
+            <div class="timeline" style="margin-top: 0.4rem;">
+              <div class="timeline-item">
+                <h3>Collect sample</h3>
+                <p>Choose method and define sample size.</p>
+              </div>
+              <div class="timeline-item">
+                <h3>Estimate parameter</h3>
+                <p>Point estimate and confidence interval.</p>
+              </div>
+              <div class="timeline-item">
+                <h3>Test claim</h3>
+                <p>Use test statistic and p-value.</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="sampling">
+        <div class="container">
+          <div class="cards reveal" data-delay="80">
+            <article class="card" data-pdf-point>
+              <h3>1. Sampling Principles</h3>
+              <p>
+                Sampling reduces cost and time while preserving representativeness. The objective is to infer population
+                behavior from manageable observations.
+              </p>
+              <ul>
+                <li>Population: complete set of units.</li>
+                <li>Sample: selected subset for analysis.</li>
+                <li>Sampling error: natural variation from using a subset.</li>
+              </ul>
+            </article>
+
+            <article class="card" data-pdf-point>
+              <h3>2. SRSWR and SRSWOR</h3>
+              <p>
+                SRSWR allows repeated selection and keeps draws independent. SRSWOR prevents repetition and creates
+                dependence between draws.
+              </p>
+              <div class="equation">SRSWR count (ordered) = N^n</div>
+              <div class="equation">SRSWOR count (unordered) = NCn</div>
+            </article>
+
+            <article class="card" data-pdf-point>
+              <h3>3. Stratified and Cluster Sampling</h3>
+              <ul>
+                <li>Stratified: divide by characteristic and sample each stratum.</li>
+                <li>Cluster: divide into natural groups and sample clusters.</li>
+                <li>Useful for improving precision or reducing field cost.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="tests">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <h2 class="section-title">Hypothesis Testing Toolkit</h2>
+              <p class="section-note">Decision making framework under uncertainty.</p>
+            </div>
+          </div>
+
+          <div class="cards reveal" data-delay="90">
+            <article class="card" data-pdf-point>
+              <h3>4. Core Terminology</h3>
+              <ul>
+                <li>H0: null hypothesis (baseline claim).</li>
+                <li>H1: alternative hypothesis (competing claim).</li>
+                <li>Alpha: significance level (risk of Type I error).</li>
+                <li>Beta: probability of Type II error.</li>
+                <li>p-value: evidence against H0.</li>
+              </ul>
+            </article>
+
+            <article class="card" data-pdf-point>
+              <h3>5. Confidence Interval</h3>
+              <p>A confidence interval estimates plausible parameter values around a sample estimate.</p>
+              <div class="equation">CI for mean (sigma known) = x-bar plus/minus Z * (sigma/sqrt(n))</div>
+              <p>Higher confidence or lower margin of error requires larger sample size.</p>
+            </article>
+
+            <article class="card" data-pdf-point>
+              <h3>6. Sample Size Determination</h3>
+              <p>Sample size depends on confidence level, variability, and acceptable error.</p>
+              <div class="equation">n = (Z^2 * sigma^2) / E^2</div>
+              <p>Always round up to ensure required precision is satisfied.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="cards reveal" data-delay="110">
+            <article class="card" data-pdf-point>
+              <h3>7. Tests for Proportion</h3>
+              <p>Used to compare sample proportion against a hypothesized population value.</p>
+              <div class="equation">Z = (p-hat - p0) / sqrt( p0(1-p0) / n )</div>
+            </article>
+
+            <article class="card" data-pdf-point>
+              <h3>8. Tests for Means</h3>
+              <p>
+                Includes one-sample mean tests and difference between two means, with hypothesis decision by critical value
+                or p-value.
+              </p>
+              <div class="equation">Reject H0 if p-value less than or equal to alpha</div>
+            </article>
+
+            <article class="card" data-pdf-point>
+              <h3>9. p-value Interpretation</h3>
+              <p>
+                p-value reflects the probability of obtaining observed evidence or stronger evidence assuming H0 is true.
+                Smaller p-values imply stronger contradiction of H0.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container reveal">
+          <div class="callout" data-pdf-point>
+            <strong>Learning Outcomes</strong>
+            Choose suitable sampling designs, construct confidence intervals, formulate and test hypotheses for means and
+            proportions, and justify decisions using significance and p-value logic.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>Applied Statistics Portfolio | Chapter 4</p>
+        <p><span data-year></span> | Akash, BCA Department</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" type="button" aria-label="Back to top">up</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

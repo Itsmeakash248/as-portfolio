@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Description of data chapter covering data types, scales of measurement, frequency distributions, central tendency, dispersion, and shape measures."
+    />
+    <title>Applied Statistics Portfolio | Description of the Data</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body data-page-title="Description of the Data" data-owner="Akash">
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <a class="brand" href="home.html" aria-label="Go to home page">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-text">Akash | Statistics</span>
+        </a>
+
+        <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-label="Open navigation" aria-expanded="false">
+          menu
+        </button>
+
+        <nav>
+          <ul class="nav-links" data-nav-links>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="description-of-the-data.html">Data Description</a></li>
+            <li><a href="probability.html">Probability</a></li>
+            <li><a href="random-variables-and-probability-distribution.html">Random Variables</a></li>
+            <li><a href="statistical-inference-i.html">Inference I</a></li>
+            <li><a href="correlation-and-regression.html">Correlation & Regression</a></li>
+            <li><a href="lab-assessment.html">Lab Assessment</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+
+        <div class="topbar-actions">
+          <button class="btn btn-outline js-download-pdf" type="button">Download PDF</button>
+          <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch theme" title="Switch theme">moon</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container hero-grid">
+          <article class="hero-panel reveal">
+            <p class="eyebrow">Chapter 1</p>
+            <h1 class="hero-title" data-pdf-point>Description of the Data</h1>
+            <p class="hero-subtitle" data-pdf-point>
+              This chapter establishes the statistical foundation for organizing raw observations, summarizing patterns,
+              and preparing data for probability and inference.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#concepts">Core concepts</a>
+              <a class="btn btn-accent" href="lab-assessment.html">View implementation</a>
+            </div>
+          </article>
+
+          <aside class="glass-card hero-summary reveal" data-delay="120">
+            <h2 class="section-title">Coverage map</h2>
+            <ul class="inline-list">
+              <li>Qualitative vs Quantitative</li>
+              <li>Nominal to Ratio scales</li>
+              <li>Frequency distribution</li>
+              <li>Mean, median, mode</li>
+              <li>Range, variance, SD, CV</li>
+              <li>Skewness and kurtosis</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="concepts">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <h2 class="section-title">Fundamental Concepts</h2>
+              <p class="section-note">Understanding structure before computation improves accuracy and interpretation.</p>
+            </div>
+          </div>
+
+          <div class="cards reveal" data-delay="80">
+            <article class="card" data-pdf-point>
+              <h3>1. Types of Data</h3>
+              <p>
+                Qualitative data captures categories and labels, while quantitative data represents measurable numeric values.
+                Quantitative data can be discrete (countable) or continuous (measurable on a range).
+              </p>
+              <ul>
+                <li>Qualitative: gender, color, city.</li>
+                <li>Discrete quantitative: number of students, number of books.</li>
+                <li>Continuous quantitative: height, weight, temperature.</li>
+              </ul>
+            </article>
+
+            <article class="card" data-pdf-point>
+              <h3>2. Scales of Measurement</h3>
+              <p>Measurement scales define valid operations and interpretation depth.</p>
+              <ul>
+                <li>Nominal: category labels with no ranking.</li>
+                <li>Ordinal: ordered categories with unequal intervals.</li>
+                <li>Interval: equal differences without a true zero.</li>
+                <li>Ratio: equal differences with an absolute zero.</li>
+              </ul>
+            </article>
+
+            <article class="card" data-pdf-point>
+              <h3>3. Frequency Distribution</h3>
+              <p>
+                Frequency tables condense large datasets into readable form. Discrete tables list exact values; continuous
+                tables group values into class intervals.
+              </p>
+              <div class="data-table-wrap" style="margin-top: 0.7rem;">
+                <table class="data-table" aria-label="Sample frequency table">
+                  <thead>
+                    <tr>
+                      <th>Marks interval</th>
+                      <th>Frequency</th>
+                      <th>Cumulative frequency</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>0 - 10</td>
+                      <td>4</td>
+                      <td>4</td>
+                    </tr>
+                    <tr>
+                      <td>10 - 20</td>
+                      <td>6</td>
+                      <td>10</td>
+                    </tr>
+                    <tr>
+                      <td>20 - 30</td>
+                      <td>5</td>
+                      <td>15</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="cards reveal" data-delay="80">
+            <article class="card" data-pdf-point>
+              <h3>4. Measures of Central Tendency</h3>
+              <p>Central tendency identifies the representative value of a distribution.</p>
+              <div class="equation">Mean = (sum of observations) / (number of observations)</div>
+              <ul>
+                <li>Mean is sensitive to extreme values.</li>
+                <li>Median is robust for skewed distributions.</li>
+                <li>Mode highlights the most frequent category or value.</li>
+              </ul>
+            </article>
+
+            <article class="card" data-pdf-point>
+              <h3>5. Measures of Dispersion</h3>
+              <p>
+                Dispersion quantifies spread and reliability. Two datasets may share the same mean but differ in variability.
+              </p>
+              <div class="equation">Range = Maximum - Minimum</div>
+              <div class="equation">Standard deviation = square root of variance</div>
+              <div class="equation">Coefficient of variation = (SD / Mean) * 100</div>
+            </article>
+
+            <article class="card" data-pdf-point>
+              <h3>6. Shape of Distribution</h3>
+              <p>Skewness and kurtosis explain distribution symmetry and tail behavior.</p>
+              <ul>
+                <li>Positive skew: tail extends right, mean &gt; median.</li>
+                <li>Negative skew: tail extends left, mean &lt; median.</li>
+                <li>Symmetric: mean approximately equals median approximately equals mode.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container reveal">
+          <div class="callout" data-pdf-point>
+            <strong>Learning Outcomes</strong>
+            Organize raw data systematically, compute descriptive measures, interpret graphs such as histograms and boxplots,
+            and prepare datasets for higher-level statistical inference.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>Applied Statistics Portfolio | Chapter 1</p>
+        <p><span data-year></span> | Akash, BCA Department</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" type="button" aria-label="Back to top">up</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

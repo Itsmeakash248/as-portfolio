@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Lab assessment page with Python implementations for descriptive statistics, probability, random variables, and distribution-based calculations."
+    />
+    <title>Applied Statistics Portfolio | Lab Assessment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body data-page-title="Lab Assessment" data-owner="Akash">
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <a class="brand" href="home.html" aria-label="Go to home page">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-text">Akash | Statistics</span>
+        </a>
+
+        <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-label="Open navigation" aria-expanded="false">
+          menu
+        </button>
+
+        <nav>
+          <ul class="nav-links" data-nav-links>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="description-of-the-data.html">Data Description</a></li>
+            <li><a href="probability.html">Probability</a></li>
+            <li><a href="random-variables-and-probability-distribution.html">Random Variables</a></li>
+            <li><a href="statistical-inference-i.html">Inference I</a></li>
+            <li><a href="correlation-and-regression.html">Correlation & Regression</a></li>
+            <li><a href="lab-assessment.html">Lab Assessment</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+
+        <div class="topbar-actions">
+          <button class="btn btn-outline js-download-pdf" type="button">Download PDF</button>
+          <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch theme" title="Switch theme">moon</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container hero-grid">
+          <article class="hero-panel reveal">
+            <p class="eyebrow">Chapter 6</p>
+            <h1 class="hero-title" data-pdf-point>Python Implementation Lab Assessment</h1>
+            <p class="hero-subtitle" data-pdf-point>
+              This section converts theoretical concepts into executable programs. Each snippet demonstrates a practical
+              statistical operation with transparent logic and reusable structure.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#snippetBrowser">Browse snippets</a>
+              <button class="btn btn-accent js-download-pdf" type="button">Download lab summary</button>
+            </div>
+          </article>
+
+          <aside class="glass-card hero-summary reveal" data-delay="120">
+            <h2 class="section-title">Lab progression timeline</h2>
+            <div class="timeline">
+              <div class="timeline-item" data-pdf-point>
+                <h3>Lab 01</h3>
+                <p>Descriptive statistics and data visualization.</p>
+              </div>
+              <div class="timeline-item" data-pdf-point>
+                <h3>Lab 02</h3>
+                <p>Probability rules, card and dice examples, Bayes applications.</p>
+              </div>
+              <div class="timeline-item" data-pdf-point>
+                <h3>Lab 03</h3>
+                <p>Distribution functions, PMF/CDF computation, and expectation analysis.</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="snippetBrowser">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <h2 class="section-title">Search and Filter Snippets</h2>
+              <p class="section-note">Use keyword search and topic filter to quickly find a specific implementation pattern.</p>
+            </div>
+          </div>
+
+          <div class="search-panel reveal" data-delay="80">
+            <label for="snippetSearch">Search within code and titles</label>
+            <input class="input" id="snippetSearch" type="search" placeholder="Try: bayes, histogram, poisson, mean" />
+
+            <label for="snippetTopicFilter">Filter by topic</label>
+            <select class="select" id="snippetTopicFilter">
+              <option value="all">All topics</option>
+              <option value="descriptive">Descriptive statistics</option>
+              <option value="probability">Probability</option>
+              <option value="distribution">Distributions</option>
+              <option value="visualization">Visualization</option>
+            </select>
+          </div>
+
+          <div class="snippets reveal" data-delay="120" style="margin-top: 1rem;">
+            <article
+              class="snippet-card"
+              data-title="Descriptive statistics with NumPy"
+              data-topics="descriptive,visualization"
+              data-body="mean median standard deviation histogram marks"
+            >
+              <header class="snippet-head">
+                <h3>Descriptive Statistics and Histogram</h3>
+                <div class="snippet-tags">
+                  <span class="tag">descriptive</span>
+                  <span class="tag">visualization</span>
+                  <button class="copy-btn" type="button" data-copy-target="code-stats">Copy</button>
+                </div>
+              </header>
+              <pre class="snippet-code" id="code-stats">import numpy as np
+import matplotlib.pyplot as plt
+
+data = [75, 89, 66, 52, 90, 68, 83, 94, 77, 60]
+
+mean = np.mean(data)
+median = np.median(data)
+std_dev = np.std(data)
+
+print("Mean:", mean)
+print("Median:", median)
+print("Standard Deviation:", std_dev)
+
+plt.hist(data, bins=5, color="#0c8a72", edgecolor="white")
+plt.title("Histogram of Marks")
+plt.xlabel("Marks")
+plt.ylabel("Frequency")
+plt.show()</pre>
+            </article>
+
+            <article
+              class="snippet-card"
+              data-title="Frequency distribution using unique counts"
+              data-topics="descriptive"
+              data-body="np.unique values frequency distribution"
+            >
+              <header class="snippet-head">
+                <h3>Frequency Distribution Table</h3>
+                <div class="snippet-tags">
+                  <span class="tag">descriptive</span>
+                  <button class="copy-btn" type="button" data-copy-target="code-frequency">Copy</button>
+                </div>
+              </header>
+              <pre class="snippet-code" id="code-frequency">import numpy as np
+
+marks = np.array([
+    75, 89, 66, 52, 90, 68, 83, 74, 77, 60,
+    38, 47, 87, 65, 97, 49, 65, 70, 73, 81
+])
+
+values, freq = np.unique(marks, return_counts=True)
+for value, count in zip(values, freq):
+    print(f"{value}: {count}")</pre>
+            </article>
+
+            <article
+              class="snippet-card"
+              data-title="Card probability using addition rule"
+              data-topics="probability"
+              data-body="queen hearts addition rule union probability"
+            >
+              <header class="snippet-head">
+                <h3>Card Problem Using Addition Rule</h3>
+                <div class="snippet-tags">
+                  <span class="tag">probability</span>
+                  <button class="copy-btn" type="button" data-copy-target="code-card">Copy</button>
+                </div>
+              </header>
+              <pre class="snippet-code" id="code-card">total_cards = 52
+queens = 4
+hearts = 13
+queen_of_hearts = 1
+
+favorable = queens + hearts - queen_of_hearts
+probability = favorable / total_cards
+
+print("P(queen or heart):", probability)</pre>
+            </article>
+
+            <article
+              class="snippet-card"
+              data-title="Bayes theorem for production units"
+              data-topics="probability"
+              data-body="bayes theorem production defective conditional probability"
+            >
+              <header class="snippet-head">
+                <h3>Bayes Theorem in Manufacturing</h3>
+                <div class="snippet-tags">
+                  <span class="tag">probability</span>
+                  <button class="copy-btn" type="button" data-copy-target="code-bayes">Copy</button>
+                </div>
+              </header>
+              <pre class="snippet-code" id="code-bayes"># machine contribution
+m1, m2, m3 = 0.30, 0.50, 0.20
+
+# defect rates
+p_d_given_m1 = 0.02
+p_d_given_m2 = 0.03
+p_d_given_m3 = 0.05
+
+p_d = (m1 * p_d_given_m1) + (m2 * p_d_given_m2) + (m3 * p_d_given_m3)
+p_m2_given_d = (m2 * p_d_given_m2) / p_d
+
+print("P(M2 | Defective):", round(p_m2_given_d, 4))</pre>
+            </article>
+
+            <article
+              class="snippet-card"
+              data-title="Hypergeometric PMF and CDF"
+              data-topics="distribution"
+              data-body="pmf cdf defective chips hypergeometric"
+            >
+              <header class="snippet-head">
+                <h3>PMF and CDF for Defective Chips</h3>
+                <div class="snippet-tags">
+                  <span class="tag">distribution</span>
+                  <button class="copy-btn" type="button" data-copy-target="code-pmf">Copy</button>
+                </div>
+              </header>
+              <pre class="snippet-code" id="code-pmf">import math
+
+N = 25   # total chips
+K = 5    # defective chips
+n = 4    # chips selected
+x_values = [0, 1, 2, 3, 4]
+
+pmf = []
+for x in x_values:
+    p = (math.comb(K, x) * math.comb(N - K, n - x)) / math.comb(N, n)
+    pmf.append(p)
+
+cdf = []
+running = 0
+for p in pmf:
+    running += p
+    cdf.append(running)
+
+for x, p, c in zip(x_values, pmf, cdf):
+    print(x, round(p, 4), round(c, 4))</pre>
+            </article>
+
+            <article
+              class="snippet-card"
+              data-title="Discrete distribution mean and variance"
+              data-topics="distribution"
+              data-body="expected value variance cdf discrete random variable"
+            >
+              <header class="snippet-head">
+                <h3>Mean, Variance, and CDF of a Discrete RV</h3>
+                <div class="snippet-tags">
+                  <span class="tag">distribution</span>
+                  <button class="copy-btn" type="button" data-copy-target="code-meanvar">Copy</button>
+                </div>
+              </header>
+              <pre class="snippet-code" id="code-meanvar">x = [-2, -1, 0, 1, 2, 3]
+k = 0.1
+p = [0, 0.1, k, 0.2, 2*k, 0.3]
+
+mean = sum(xi * pi for xi, pi in zip(x, p))
+ex2 = sum((xi ** 2) * pi for xi, pi in zip(x, p))
+variance = ex2 - (mean ** 2)
+
+cdf = []
+running = 0
+for pi in p:
+    running += pi
+    cdf.append(running)
+
+print("Mean:", round(mean, 4))
+print("Variance:", round(variance, 4))
+print("CDF:", [round(val, 4) for val in cdf])</pre>
+            </article>
+
+            <article
+              class="snippet-card"
+              data-title="Poisson event probabilities"
+              data-topics="distribution,probability"
+              data-body="poisson exactly at least lambda defectives"
+            >
+              <header class="snippet-head">
+                <h3>Poisson Event Queries</h3>
+                <div class="snippet-tags">
+                  <span class="tag">distribution</span>
+                  <span class="tag">probability</span>
+                  <button class="copy-btn" type="button" data-copy-target="code-poisson">Copy</button>
+                </div>
+              </header>
+              <pre class="snippet-code" id="code-poisson">import math
+
+lam = 1.0
+
+def poisson(x):
+    return (math.exp(-lam) * (lam ** x)) / math.factorial(x)
+
+exactly_three = poisson(3)
+at_least_one = 1 - poisson(0)
+between_two_and_four = poisson(2) + poisson(3) + poisson(4)
+
+print("P(X=3):", round(exactly_three, 4))
+print("P(X>=1):", round(at_least_one, 4))
+print("P(2<=X<=4):", round(between_two_and_four, 4))</pre>
+            </article>
+
+            <article
+              class="snippet-card"
+              data-title="Density curve using gaussian_kde"
+              data-topics="visualization,descriptive"
+              data-body="gaussian_kde frequency curve marks density"
+            >
+              <header class="snippet-head">
+                <h3>Frequency Curve with gaussian_kde</h3>
+                <div class="snippet-tags">
+                  <span class="tag">visualization</span>
+                  <span class="tag">descriptive</span>
+                  <button class="copy-btn" type="button" data-copy-target="code-kde">Copy</button>
+                </div>
+              </header>
+              <pre class="snippet-code" id="code-kde">import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import gaussian_kde
+
+marks = np.array([75, 89, 66, 52, 90, 68, 83, 94, 77, 60])
+density = gaussian_kde(marks)
+x = np.linspace(marks.min(), marks.max(), 100)
+
+plt.plot(x, density(x), color="#ef8354")
+plt.title("Frequency Curve using gaussian_kde")
+plt.xlabel("Marks")
+plt.ylabel("Density")
+plt.show()</pre>
+            </article>
+          </div>
+
+          <p class="empty-state" id="snippetEmptyState">No snippets matched your current search and filter selection.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container reveal">
+          <div class="callout" data-pdf-point>
+            <strong>Lab Outcomes</strong>
+            Convert formulas into executable logic, validate manual results through code, and visualize statistical behavior
+            for clearer interpretation and communication.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>Applied Statistics Portfolio | Chapter 6</p>
+        <p><span data-year></span> | Akash, BCA Department</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" type="button" aria-label="Back to top">up</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/lab.js"></script>
+  </body>
+</html>

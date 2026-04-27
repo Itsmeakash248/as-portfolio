@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Random variables and probability distributions chapter including PMF, PDF, CDF, expected value, variance, and key theoretical distributions."
+    />
+    <title>Applied Statistics Portfolio | Random Variables and Probability Distribution</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body data-page-title="Random Variables and Probability Distribution" data-owner="Akash">
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <a class="brand" href="home.html" aria-label="Go to home page">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-text">Akash | Statistics</span>
+        </a>
+
+        <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-label="Open navigation" aria-expanded="false">
+          menu
+        </button>
+
+        <nav>
+          <ul class="nav-links" data-nav-links>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="description-of-the-data.html">Data Description</a></li>
+            <li><a href="probability.html">Probability</a></li>
+            <li><a href="random-variables-and-probability-distribution.html">Random Variables</a></li>
+            <li><a href="statistical-inference-i.html">Inference I</a></li>
+            <li><a href="correlation-and-regression.html">Correlation & Regression</a></li>
+            <li><a href="lab-assessment.html">Lab Assessment</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+
+        <div class="topbar-actions">
+          <button class="btn btn-outline js-download-pdf" type="button">Download PDF</button>
+          <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch theme" title="Switch theme">moon</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container hero-grid">
+          <article class="hero-panel reveal">
+            <p class="eyebrow">Chapter 3</p>
+            <h1 class="hero-title" data-pdf-point>Random Variables and Probability Distribution</h1>
+            <p class="hero-subtitle" data-pdf-point>
+              Random variables convert random outcomes into numeric values, allowing us to model uncertainty with precise
+              probability distributions and compute meaningful summary measures.
+            </p>
+            <div class="hero-meta">
+              <span class="chip">PMF</span>
+              <span class="chip">PDF</span>
+              <span class="chip">CDF</span>
+              <span class="chip">Expected value</span>
+              <span class="chip">Variance</span>
+            </div>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#distributions">Distribution models</a>
+              <a class="btn btn-accent" href="lab-assessment.html">See coded examples</a>
+            </div>
+          </article>
+
+          <aside class="glass-card hero-summary reveal" data-delay="120">
+            <h2 class="section-title">Quick differentiation</h2>
+            <ul>
+              <li><strong>Discrete RV:</strong> countable outcomes.</li>
+              <li><strong>Continuous RV:</strong> measurable outcomes over intervals.</li>
+              <li><strong>PMF/PDF:</strong> assign probability behavior.</li>
+              <li><strong>CDF:</strong> cumulative probability up to x.</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="cards reveal" data-delay="80">
+            <article class="card" data-pdf-point>
+              <h3>1. Random Variable Basics</h3>
+              <p>
+                A random variable is a function from outcomes to numbers. For one coin toss, define X as number of heads:
+                X equals 1 for Head and 0 for Tail.
+              </p>
+              <div class="equation">X in {0, 1} -> discrete random variable</div>
+            </article>
+
+            <article class="card" data-pdf-point>
+              <h3>2. Discrete vs Continuous</h3>
+              <ul>
+                <li>Discrete: number of calls, defects, students present.</li>
+                <li>Continuous: waiting time, height, weight, temperature.</li>
+                <li>Discrete uses PMF; continuous uses PDF and interval probability.</li>
+              </ul>
+            </article>
+
+            <article class="card" data-pdf-point>
+              <h3>3. Distribution Functions</h3>
+              <div class="equation">PMF: P(X = x)</div>
+              <div class="equation">PDF: f(x), with integral over range = 1</div>
+              <div class="equation">CDF: F(x) = P(X less than or equal to x)</div>
+              <p>These representations let us compute expected value and uncertainty rigorously.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="distributions">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <h2 class="section-title">Major Theoretical Distributions</h2>
+              <p class="section-note">Each model is suitable for a specific type of random process.</p>
+            </div>
+          </div>
+
+          <div class="cards reveal" data-delay="90">
+            <article class="card" data-pdf-point>
+              <h3>Binomial Distribution</h3>
+              <p>Used for fixed number of independent trials with two outcomes and constant success probability.</p>
+              <div class="equation">P(X = x) = nCx * p^x * (1 - p)^(n - x)</div>
+              <p>Example: probability of exactly 2 heads in 3 coin tosses is 3/8.</p>
+            </article>
+
+            <article class="card" data-pdf-point>
+              <h3>Poisson Distribution</h3>
+              <p>Models count of rare events in a fixed interval when average rate is known.</p>
+              <div class="equation">P(X = x) = (e^(-lambda) * lambda^x) / x!</div>
+              <p>Example: with lambda = 2 calls per minute, P(X = 2) is approximately 0.27.</p>
+            </article>
+
+            <article class="card" data-pdf-point>
+              <h3>Normal and Exponential</h3>
+              <p>
+                Normal distribution captures symmetric continuous behavior around mean. Exponential distribution models time
+                between events.
+              </p>
+              <ul>
+                <li>Normal: marks, height, test scores.</li>
+                <li>Exponential: waiting time, inter-arrival times, failure intervals.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container reveal">
+          <div class="callout" data-pdf-point>
+            <strong>Learning Outcomes</strong>
+            Distinguish discrete and continuous variables, build PMF/PDF/CDF representations, compute expectation and
+            variance, and select appropriate theoretical distributions for real-world contexts.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>Applied Statistics Portfolio | Chapter 3</p>
+        <p><span data-year></span> | Akash, BCA Department</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" type="button" aria-label="Back to top">up</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Probability chapter covering definitions, interpretations, addition and multiplication rules, conditional probability, and Bayes' theorem."
+    />
+    <title>Applied Statistics Portfolio | Probability</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body data-page-title="Probability" data-owner="Akash">
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <a class="brand" href="home.html" aria-label="Go to home page">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-text">Akash | Statistics</span>
+        </a>
+
+        <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-label="Open navigation" aria-expanded="false">
+          menu
+        </button>
+
+        <nav>
+          <ul class="nav-links" data-nav-links>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="description-of-the-data.html">Data Description</a></li>
+            <li><a href="probability.html">Probability</a></li>
+            <li><a href="random-variables-and-probability-distribution.html">Random Variables</a></li>
+            <li><a href="statistical-inference-i.html">Inference I</a></li>
+            <li><a href="correlation-and-regression.html">Correlation & Regression</a></li>
+            <li><a href="lab-assessment.html">Lab Assessment</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+
+        <div class="topbar-actions">
+          <button class="btn btn-outline js-download-pdf" type="button">Download PDF</button>
+          <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch theme" title="Switch theme">moon</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container hero-grid">
+          <article class="hero-panel reveal">
+            <p class="eyebrow">Chapter 2</p>
+            <h1 class="hero-title" data-pdf-point>Probability</h1>
+            <p class="hero-subtitle" data-pdf-point>
+              Probability quantifies uncertainty by assigning a value between 0 and 1 to events in a random experiment.
+              It enables evidence-based decisions under incomplete certainty.
+            </p>
+            <div class="hero-meta">
+              <span class="chip">Random experiment</span>
+              <span class="chip">Sample space</span>
+              <span class="chip">Events</span>
+              <span class="chip">Conditional probability</span>
+            </div>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#rules">Rules and formulas</a>
+              <a class="btn btn-accent" href="lab-assessment.html">Solve with Python</a>
+            </div>
+          </article>
+
+          <aside class="glass-card hero-summary reveal" data-delay="120">
+            <h2 class="section-title">Three interpretations</h2>
+            <ul>
+              <li><strong>Classical:</strong> based on equally likely outcomes.</li>
+              <li><strong>Empirical:</strong> based on observed frequencies.</li>
+              <li><strong>Subjective:</strong> based on informed belief.</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="rules">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <h2 class="section-title">Core Rules</h2>
+              <p class="section-note">The following identities are the backbone of event probability calculations.</p>
+            </div>
+          </div>
+
+          <div class="cards reveal" data-delay="80">
+            <article class="card" data-pdf-point>
+              <h3>Addition Rule</h3>
+              <p>Used to compute probability of at least one of two events occurring.</p>
+              <div class="equation">P(A union B) = P(A) + P(B) - P(A intersection B)</div>
+              <p>For mutually exclusive events, the intersection term is zero.</p>
+              <div class="equation">P(A union B) = P(A) + P(B)</div>
+            </article>
+
+            <article class="card" data-pdf-point>
+              <h3>Multiplication Rule</h3>
+              <p>Used to compute probability of two events occurring jointly.</p>
+              <div class="equation">Independent: P(A intersection B) = P(A) * P(B)</div>
+              <div class="equation">Dependent: P(A intersection B) = P(A) * P(B given A)</div>
+              <p>This distinction is crucial when sampling without replacement.</p>
+            </article>
+
+            <article class="card" data-pdf-point>
+              <h3>Conditional Probability</h3>
+              <p>Conditional probability updates event likelihood after partial information is known.</p>
+              <div class="equation">P(A given B) = P(A intersection B) / P(B), where P(B) &gt; 0</div>
+              <p>It formalizes information-driven decision making in uncertain systems.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="cards reveal" data-delay="100">
+            <article class="card" data-pdf-point>
+              <h3>Worked Example: Deck of Cards</h3>
+              <p>Find the probability that a drawn card is either a king or a heart.</p>
+              <div class="equation">P(King) = 4/52, P(Heart) = 13/52, P(King and Heart) = 1/52</div>
+              <div class="equation">P(King or Heart) = 4/52 + 13/52 - 1/52 = 16/52 = 4/13</div>
+            </article>
+
+            <article class="card" data-pdf-point>
+              <h3>Worked Example: Coin and Die</h3>
+              <p>Find probability of getting Head and an even number when tossing a coin and rolling a die.</p>
+              <div class="equation">P(Head) = 1/2, P(Even) = 3/6 = 1/2</div>
+              <div class="equation">P(Head and Even) = 1/2 * 1/2 = 1/4</div>
+            </article>
+
+            <article class="card" data-pdf-point>
+              <h3>Bayes' Theorem</h3>
+              <p>
+                Bayes' theorem reverses conditioning and helps infer causes from observed outcomes.
+              </p>
+              <div class="equation">P(A given B) = [P(B given A) * P(A)] / P(B)</div>
+              <p>
+                Applications: quality control, medical diagnosis, spam detection, and decision support under uncertainty.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container reveal">
+          <div class="callout" data-pdf-point>
+            <strong>Learning Outcomes</strong>
+            Define random experiments and events, apply addition and multiplication rules, interpret conditional probability,
+            and solve reverse-probability problems using Bayes' theorem.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>Applied Statistics Portfolio | Chapter 2</p>
+        <p><span data-year></span> | Akash, BCA Department</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" type="button" aria-label="Back to top">up</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
